@@ -1,0 +1,171 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+body{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 5fr;
+}
+main{
+    background-color: rgb(38, 91, 106);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    "h h"
+    "n n"
+    "ar as"
+    "f f";
+}
+header{
+    padding: 5px;
+    grid-area: h;
+}
+nav{
+    padding: 5px;
+    grid-area: n;
+}
+aside{
+    padding: 5px;
+    grid-area: as;
+    background-color: rgb(48, 61, 116);
+}
+article{
+    grid-area: ar;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+footer{
+    grid-area: f;
+}
+button{
+    color: black;
+    padding: 2px;
+}
+img{
+    width: 100%;
+}
+#p1{
+    grid-area: t1
+}
+#p2{
+    grid-area: t2
+}
+#p3{
+    grid-area: t3
+}
+#p4{
+    grid-area: t4
+}
+#s1{
+    grid-area: g1
+}
+#s2{
+    grid-area: g2
+}
+#s3{
+    grid-area: g3
+}
+#s4{
+    grid-area: g4
+}
+.osszeg{
+    border-top: 1px solid white;
+    text-align: center;
+    grid-area: o;
+}
+.fizet{
+
+    grid-area: f;
+}
+h4{
+    grid-area: h4;
+}
+.termek{
+    padding: 5px ;
+}
+.kosar{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: repeat(6, auto) 50px 0;
+    grid-template-areas: 
+    "h4 h4"
+    "t1 g1"
+    "t2 g2"
+    "t3 g3"
+    "t4 g4"
+    "o o"
+    "f f";
+}
+.termek{
+    display: grid;
+    grid-template-rows: 25px auto auto 30px;
+    border: 1px solid;
+    border-radius: 5%;
+    background-color: rgb(170, 136, 57);
+}
+.kep{
+    height: 90px;
+    overflow: hidden;
+}
+@media screen and (max-width: 800px) {
+    main{
+        font-size: calc( 8px + 2vw );
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "h h"
+        "n n"
+        "as as"
+        "ar ar"
+        "f f";
+    }
+    .kep{
+        height: auto;
+        overflow: hidden;
+    }
+
+    article{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    main{
+        font-size: calc( 8px + 2vw );
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "h"
+        "n"
+        "as"
+        "ar"
+        "f";
+    }
+    .kep{
+        height: auto;
+        overflow: hidden;
+    }
+
+    article{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+}
